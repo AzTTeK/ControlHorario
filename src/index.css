@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Modern Premium Palette */
+  --color-primary: #6366F1; /* Indigo */
+  --color-primary-50: #EEF2FF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-500: #6366F1;
+  --color-primary-600: #4F46E5;
+  --color-primary-700: #4338CA;
+  
+  --color-accent: #8B5CF6; /* Violet */
+  --color-accent-light: #EDE9FE;
+  
+  --color-success: #10B981;
+  --color-success-light: #D1FAE5;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-danger: #EF4444;
+  --color-danger-light: #FEE2E2;
+  
+  --color-background: #F4F5F7;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  
+  --color-border: #F1F5F9;
+  --color-border-strong: #E2E8F0;
+  
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #94A3B8;
+
+  /* Premium Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 15px -3px rgba(15, 23, 42, 0.03), 0 4px 6px -4px rgba(15, 23, 42, 0.02);
+  --shadow-card-hover: 0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+  --shadow-popover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+  /* Border Radius */
+  --radius-card: 1.25rem;
+  --radius-button: 0.875rem;
+  --radius-pill: 9999px;
+}
+
+@layer base {
+  /* DARK MODE OVERRIDES - NEON STYLE */
+  .dark {
+    --color-background: #09090b; /* Fondo principal negro/chacoal */
+    --color-surface: #121214;    /* Tarjetas oscuras */
+    --color-surface-hover: #1c1c1f;
+    
+    --color-border: #27272a;
+    --color-border-strong: #3f3f46;
+    
+    --color-text-primary: #f4f4f5;
+    --color-text-secondary: #a1a1aa;
+    --color-text-tertiary: #71717a;
+
+    --color-primary: #bf38ff; /* Neon Purple */
+    --color-primary-50: rgba(191, 56, 255, 0.1);
+    --color-primary-100: rgba(191, 56, 255, 0.2);
+    --color-primary-500: #bf38ff;
+    --color-primary-600: #a72be6;
+    --color-primary-700: #931ecc;
+    
+    --color-accent: #39ff14; /* Neon Green */
+    --color-accent-light: rgba(57, 255, 20, 0.15);
+    
+    --color-success: #39ff14; /* Neon Green (reuse) */
+    --color-success-light: rgba(57, 255, 20, 0.15);
+    
+    --color-warning: #ffb300;
+    --color-warning-light: rgba(255, 179, 0, 0.15);
+    
+    --color-danger: #ff003c; /* Neon Red */
+    --color-danger-light: rgba(255, 0, 60, 0.15);
+    
+    /* Neon Glow Shadows for Dark Mode */
+    --shadow-card: 0 0 15px -3px rgba(0, 240, 255, 0.1);
+    --shadow-card-hover: 0 0 25px -5px rgba(0, 240, 255, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-text-primary font-sans antialiased;
+    letter-spacing: -0.011em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-text-tertiary/20 rounded-full hover:bg-text-tertiary/40 transition-colors;
+}
+
+/* Glassmorphism & Effects */
+.glass {
+  @apply bg-surface/70 backdrop-blur-xl border border-white/40 shadow-card;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent;
+}
+
+.gradient-primary {
+  background-image: linear-gradient(to bottom right, var(--color-primary-600), var(--color-accent));
+}
+
+/* Layer Components */
+@layer components {
+  .card {
+    @apply bg-surface rounded-card border border-border shadow-card overflow-hidden transition-all duration-300;
+  }
+  .card:hover {
+    @apply shadow-card-hover transform -translate-y-0.5;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-button font-normal px-5 py-2.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97];
+    font-size: 0.9375rem;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 focus:ring-primary-500 shadow-sm;
+    background-image: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-600));
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-secondary border border-border-strong hover:bg-surface-hover hover:text-text-primary focus:ring-border;
+  }
+  
+  .input {
+    @apply flex h-12 w-full rounded-button border border-border-strong bg-surface/50 px-4 py-2 text-sm text-text-primary transition-all placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary focus:bg-surface disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .stat-card-icon {
+    @apply flex items-center justify-center w-12 h-12 rounded-2xl shadow-sm;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px -5px var(--color-primary-500);
+}
