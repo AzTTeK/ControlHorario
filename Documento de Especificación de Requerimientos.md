@@ -1,8 +1,3 @@
-[**![][image1]**](https://www.dominiaacademy.com/)
-
-[**DominIA Academy**](https://www.dominiaacademy.com/)
-
-**Autor: Josema Fernández.**
 
 # **Especificación Técnica: Aplicación de Control Horario**
 
