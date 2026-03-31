@@ -165,15 +165,6 @@ La aplicacion esta desplegada en **Vercel** con integracion continua desde GitHu
 
 ---
 
-## Estado del Proyecto
-
-<div align="center">
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/AzTTeK/ControlHorario/deploy.yml?style=for-the-badge&label=Build)](https://github.com/AzTTeK/ControlHorario/actions)
-[![Issues](https://img.shields.io/github/issues/AzTTeK/ControlHorario?style=for-the-badge)](https://github.com/AzTTeK/ControlHorario/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/AzTTeK/ControlHorario?style=for-the-badge)](https://github.com/AzTTeK/ControlHorario/pulls)
-[![License](https://img.shields.io/github/license/AzTTeK/ControlHorario?style=for-the-badge)](https://github.com/AzTTeK/ControlHorario/blob/main/LICENSE)
-
 </div>
 
 ---
