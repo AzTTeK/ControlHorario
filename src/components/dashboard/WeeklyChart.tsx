@@ -61,8 +61,8 @@ export function WeeklyChart({ data }: WeeklyChartProps) {
                 fontSize: '12px',
                 fontWeight: 500,
               }}
-              formatter={(value: number, name: string) => [
-                `${value.toFixed(1)}h`,
+              formatter={(value, name) => [
+                `${Number(value).toFixed(1)}h`,
                 name === 'horas' ? 'Trabajado' : 'Pausas',
               ]}
               cursor={{ fill: '#F8FAFC' }}

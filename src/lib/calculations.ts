@@ -1,5 +1,4 @@
 import { differenceInSeconds, parseISO, startOfWeek, endOfWeek, startOfMonth, endOfMonth, isWithinInterval, eachDayOfInterval, format } from 'date-fns';
-import { es } from 'date-fns/locale';
 import type { TimeEntry, Pause, DailyStats, WeeklyStats, MonthlyStats } from '@/types';
 
 /**
@@ -138,7 +137,6 @@ export function getMonthlyStats(entries: TimeEntry[], referenceDate?: Date): Mon
   });
 
   const totalHours = monthEntries.reduce((sum, e) => sum + (e.total_hours ?? 0), 0);
-  const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
   const daysWorked = new Set(monthEntries.map((e) => e.date)).size;
 
   // Agrupar por semana

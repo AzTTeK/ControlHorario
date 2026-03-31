@@ -90,7 +90,7 @@ export function generateMockEntries(days: number = 30): TimeEntry[] {
 
     if (breakPause) {
       breakPause.time_entry_id = entryId;
-      pauses.push(breakPause);
+      pauses.push({ ...breakPause, type: 'meal' as const });
     }
 
     entries.push({
