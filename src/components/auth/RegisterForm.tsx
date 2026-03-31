@@ -92,9 +92,9 @@ export function RegisterForm() {
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="Tu nombre"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-sm
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-gray-900 text-sm
                     focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 focus:border-[var(--color-primary)]
-                    transition-all duration-200 placeholder:text-[var(--color-text-tertiary)]"
+                    transition-all duration-200 placeholder:text-gray-400"
                 />
               </div>
             </div>
@@ -112,9 +112,9 @@ export function RegisterForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu@email.com"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-sm
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-gray-900 text-sm
                     focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 focus:border-[var(--color-primary)]
-                    transition-all duration-200 placeholder:text-[var(--color-text-tertiary)]"
+                    transition-all duration-200 placeholder:text-gray-400"
                   autoComplete="email"
                 />
               </div>
@@ -133,9 +133,9 @@ export function RegisterForm() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Mínimo 8 caracteres"
-                  className="w-full pl-11 pr-12 py-3 rounded-xl border border-[var(--color-border)] bg-white text-sm
+                  className="w-full pl-11 pr-12 py-3 rounded-xl border border-[var(--color-border)] bg-white text-gray-900 text-sm
                     focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 focus:border-[var(--color-primary)]
-                    transition-all duration-200 placeholder:text-[var(--color-text-tertiary)]"
+                    transition-all duration-200 placeholder:text-gray-400"
                   autoComplete="new-password"
                 />
                 <button
@@ -166,9 +166,9 @@ export function RegisterForm() {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Repite la contraseña"
-                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-sm
+                  className="w-full pl-11 pr-4 py-3 rounded-xl border border-[var(--color-border)] bg-white text-gray-900 text-sm
                     focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 focus:border-[var(--color-primary)]
-                    transition-all duration-200 placeholder:text-[var(--color-text-tertiary)]"
+                    transition-all duration-200 placeholder:text-gray-400"
                   autoComplete="new-password"
                 />
               </div>
