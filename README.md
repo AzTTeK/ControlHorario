@@ -21,9 +21,6 @@
 
 **Control Horario** es una aplicacion web moderna para el registro y seguimiento de la jornada laboral. Permite a los empleados fichar entradas y salidas, gestionar pausas, y visualizar estadisticas detalladas de sus horas trabajadas.
 
-<div align="center">
-
-[![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=AzTTeK&repo=ControlHorario&theme=dark&hide_border=true&bg_color=0d1117)](https://github.com/AzTTeK/ControlHorario)
 
 </div>
 
