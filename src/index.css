@@ -119,6 +119,11 @@
   background-image: linear-gradient(to bottom right, var(--color-primary-600), var(--color-accent));
 }
 
+.dark .gradient-primary {
+  background-image: none;
+  background-color: var(--color-primary);
+}
+
 /* Layer Components */
 @layer components {
   .card {
