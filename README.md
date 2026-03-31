@@ -202,9 +202,8 @@ Este proyecto esta bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para 
 
 <div align="center">
 
-**Desarrollado con** :heart: **por [AzTTeK](https://github.com/AzTTeK)**
+**Desarrollado por [AzTTeK](https://github.com/AzTTeK)**
 
 [![GitHub followers](https://img.shields.io/github/followers/AzTTeK?style=social)](https://github.com/AzTTeK)
-[![GitHub stars](https://img.shields.io/github/stars/AzTTeK/ControlHorario?style=social)](https://github.com/AzTTeK/ControlHorario)
 
 </div>
