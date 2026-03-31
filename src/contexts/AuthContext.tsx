@@ -78,10 +78,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (error) throw error;
     if (data.user) {
       setUser(data.user);
-      // El perfil se creará mediante un trigger en la DB
-      // Pero podemos forzar una carga si es necesario
+      
+      // Crear el perfil manualmente en la tabla profiles
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .upsert({
+          id: data.user.id,
+          full_name: fullName,
+          email: email,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        });
+      
+      if (profileError) {
+        console.error('Error creating profile:', profileError);
+      } else {
+        // Cargar el perfil recien creado
+        await fetchProfile(data.user.id);
+      }
     }
-  }, []);
+  }, [fetchProfile]);
 
   const signIn = useCallback(async (email: string, password: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
