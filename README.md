@@ -151,14 +151,6 @@ La aplicacion esta desplegada en **Vercel** con integracion continua desde GitHu
 
 ---
 
-## Contribuciones
-
-<div align="center">
-
-[![Contributors](https://img.shields.io/github/contributors/AzTTeK/ControlHorario?style=for-the-badge&color=blue)](https://github.com/AzTTeK/ControlHorario/graphs/contributors)
-[![Commits](https://img.shields.io/github/commit-activity/m/AzTTeK/ControlHorario?style=for-the-badge&color=green)](https://github.com/AzTTeK/ControlHorario/commits)
-[![Last Commit](https://img.shields.io/github/last-commit/AzTTeK/ControlHorario?style=for-the-badge&color=orange)](https://github.com/AzTTeK/ControlHorario/commits)
-
 </div>
 
 ### Autor Principal
