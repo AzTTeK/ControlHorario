@@ -25,3 +25,7 @@ dist-ssr
 
 # Environment variables
 .env
+
+# Documentation and design files (not for version control)
+Documento de Especificación de Requerimientos.md
+diseño_ux_Control-Horario.png
